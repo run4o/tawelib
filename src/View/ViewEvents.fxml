@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="UserDashboard" stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.ViewEventsController">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Events" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Text>
+    </top>
+    <left>
+        <VBox prefHeight="342.0" prefWidth="143.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#reserve" prefHeight="25.0" prefWidth="150.0" text="Reserve">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Separator prefWidth="200.0" />
+                <Button mnemonicParsing="false" onAction="#viewMyReservatinos" prefHeight="50.0" prefWidth="150.0" text="View Upcoming Reservations" textAlignment="CENTER" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#viewMyPastReservatinos" prefHeight="50.0" prefWidth="150.0" text="View Past Reservations" textAlignment="CENTER" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Label fx:id="fullyBooked" text="Event fully booked. Sorry!" textFill="RED" visible="false" wrapText="true" />
+                <Label fx:id="alreadyReserved" text="You already have a reservation!" textFill="RED" visible="false" wrapText="true" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            styleClass="UserDashboard" stylesheets="@../Resources/CoreStyle.css"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="JavaFX.ResourceLogController">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resource Log" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="40.0"/>
+            </font>
+        </Text>
+    </top>
+    <left>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <left>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <bottom>
+                        <GridPane translateY="-100.0" BorderPane.alignment="CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <RadioButton fx:id="allCopiesRadio" maxHeight="-Infinity" maxWidth="-Infinity"
+                                             minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                             prefHeight="21.0" prefWidth="190.0" selected="true" text="All Copies"
+                                             translateX="5.0">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                </RadioButton>
+                                <RadioButton fx:id="loanHistoryRadio" minHeight="-Infinity" minWidth="-Infinity"
+                                             mnemonicParsing="false" prefHeight="21.0" prefWidth="190.0"
+                                             text="Loan History" translateX="5.0" GridPane.rowIndex="1"/>
+                                <RadioButton fx:id="overdueCopies" minHeight="-Infinity" minWidth="-Infinity"
+                                             mnemonicParsing="false" prefHeight="21.0" prefWidth="190.0"
+                                             text="Overdue Copies" translateX="5.0" GridPane.rowIndex="2"/>
+                            </children>
+                        </GridPane>
+                    </bottom>
+                    <right>
+                        <Button mnemonicParsing="false" onAction="#handleSearchAction" styleClass="UniversalButton"
+                                text="Search" translateY="-15.0" BorderPane.alignment="CENTER"/>
+                    </right>
+                    <center>
+                        <TextField fx:id="textResourceID" prefHeight="31.0" prefWidth="159.0"
+                                   promptText="Resource Identifier" styleClass="UniversalButton" translateY="-15.0"
+                                   BorderPane.alignment="CENTER"/>
+                    </center>
+                    <top>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;"
+                              styleClass="ScrollTitle" text="Resource Identifier" translateX="-12.0" translateY="80.0"
+                              BorderPane.alignment="CENTER"/>
+                    </top>
+                </BorderPane>
+            </left>
+        </BorderPane>
+    </left>
+    <center>
+        <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0" styleClass="HomeInterfaceFlow"
+                    BorderPane.alignment="CENTER">
+        </ScrollPane>
+    </center>
+</BorderPane>

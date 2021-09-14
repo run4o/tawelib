@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="UserDashboard" stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.EventManagermentController">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Event Management" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Text>
+    </top>
+    <left>
+        <VBox prefHeight="342.0" prefWidth="143.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#create" prefHeight="25.0" prefWidth="150.0" text="Create Event">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Separator prefWidth="200.0" />
+                <Label text="Event Management :">
+                    <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </Label>
+                <Button mnemonicParsing="false" onAction="#reservation" prefHeight="25.0" prefWidth="150.0" text="View Reservations">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="150.0" text="Edit Event">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="150.0" text="Delete Event">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Label fx:id="pastEvent" text="Can't edit past events" textFill="RED" visible="false">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" styleClass="SubScene"
+            stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            fx:controller="JavaFX.DrawingEnvironment">
+    <left>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="125.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <ColorPicker fx:id="colorPicker" editable="true" styleClass="UniversalButton"
+                             stylesheets="@../Resources/CoreStyle.css"/>
+                <ToggleButton fx:id="penButton" mnemonicParsing="false" styleClass="UniversalButton"
+                              stylesheets="@../Resources/CoreStyle.css" text="Pen"/>
+                <ToggleButton fx:id="straightButton" mnemonicParsing="false" styleClass="UniversalButton"
+                              stylesheets="@../Resources/CoreStyle.css" text="Straight Line"/>
+                <ToggleButton fx:id="eraserButton" mnemonicParsing="false" styleClass="UniversalButton"
+                              stylesheets="@../Resources/CoreStyle.css" text="Eraser"/>
+                <Button fx:id="clearButton" mnemonicParsing="false" styleClass="UniversalButton"
+                        stylesheets="@../Resources/CoreStyle.css" text="Clear Canvas"/>
+                <Button fx:id="saveButton" mnemonicParsing="false" styleClass="UniversalButton"
+                        stylesheets="@../Resources/CoreStyle.css" text="Save Avatar"/>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <Canvas fx:id="canvas" height="337.0" width="356.0" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

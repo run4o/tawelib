@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+          minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0"
+          styleClass="SubScene" stylesheets="@../Resources/CoreStyle.css"
+          xmlns="http://javafx.com/javafx/8.0.171" fx:controller="JavaFX.BookListController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="900.0">
+            <center>
+                <Pagination fx:id="bookView" maxPageIndicatorCount="5" pageCount="5" prefHeight="200.0"
+                            prefWidth="200.0" BorderPane.alignment="CENTER"/>
+            </center>
+        </BorderPane>
+    </children>
+</FlowPane>

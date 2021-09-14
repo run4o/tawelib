@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="SubScene" stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.UserStatsController">
+    <children>
+        <Pane>
+            <children>
+                <BarChart fx:id="BC" barGap="1.0" layoutX="-32.0" layoutY="-5.0" prefHeight="469.0" prefWidth="640.0" title="Statistics">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxis" label="Number Borrowed" side="LEFT" />
+                    </yAxis>
+                </BarChart>
+                <ListView fx:id="borrowList" layoutX="601.0" layoutY="35.0" prefHeight="404.0" prefWidth="310.0" visible="false" />
+            </children>
+        </Pane>
+        <ButtonBar prefHeight="40.0" prefWidth="518.0">
+            <buttons>
+                <ButtonBar prefHeight="40.0" prefWidth="429.0">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#perDayButton" prefHeight="29.0" text="Per Day" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#perWeekButton" prefHeight="25.0" prefWidth="229.0" text="Per Week" textAlignment="CENTER">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#perMonthButton" prefHeight="25.0" prefWidth="229.0" text="Per Month" textAlignment="CENTER">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                    </buttons>
+                </ButtonBar>
+            </buttons>
+        </ButtonBar>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+        <Accordion />
+    </children>
+</FlowPane>

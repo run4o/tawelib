@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="900.0" styleClass="SubScene"
+            stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="JavaFX.DVDListController">
+    <center>
+        <Pagination fx:id="dvdView" maxPageIndicatorCount="1" prefHeight="200.0" prefWidth="200.0"
+                    BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

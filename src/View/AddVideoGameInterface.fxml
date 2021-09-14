@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="SubScene" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.AddVideoGameController">
+    <center>
+        <GridPane prefWidth="675.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="144.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="165.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="247.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <GridPane prefHeight="187.0" prefWidth="710.0" GridPane.rowIndex="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Publisher" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year" GridPane.columnIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Certificate Rating" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="publisher" promptText="Publisher" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="year" promptText="Year" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="genre" promptText="Genre" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="certRating" promptText="Certificate Rating" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <Text layoutX="10.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiplayer" GridPane.rowIndex="4" />
+                        <TextField fx:id="multiplayer" layoutX="10.0" layoutY="91.0" promptText="Yes/No" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                    </children>
+                </GridPane>
+                <GridPane prefHeight="165.0" prefWidth="710.0" GridPane.rowIndex="3">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Copies" GridPane.valignment="BOTTOM" />
+                                <TextField fx:id="numOfCopies" promptText="Number of Copies" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                    <GridPane.margin>
+                                        <Insets right="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                            </children>
+                        </GridPane>
+                        <Button fx:id="createResourceButton" mnemonicParsing="false" onAction="#handleCreateResourceButtonAction" styleClass="UniversalButton" text="Create Resource" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <GridPane GridPane.columnIndex="1">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Loan Duration" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM" />
+                                <ChoiceBox fx:id="loanDuration" prefWidth="150.0" styleClass="UniversalButton" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </GridPane>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title" GridPane.valignment="BOTTOM" />
+                <TextField fx:id="title" promptText="Title" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="20.0" />
+                    </GridPane.margin>
+                </TextField>
+            </children>
+            <BorderPane.margin>
+                <Insets left="50.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <left>
+        <Button fx:id="setThumbnailButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleSetThumbnailButtonAction" styleClass="UniversalButton" text="Set Thumbnail" BorderPane.alignment="CENTER">
+            <graphic>
+                <ImageView fx:id="thumbImage" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/videoGameIcon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <BorderPane.margin>
+                <Insets bottom="150.0" left="50.0" />
+            </BorderPane.margin>
+        </Button>
+    </left>
+    <top>
+        <GridPane prefHeight="121.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                    <image>
+                        <Image url="@../Resources/videoGameIcon.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </GridPane>
+    </top>
+    <stylesheets>
+        <URL value="@../ExampleProject/source/src/Resources/CoreStyle.css" />
+        <URL value="@../Resources/CoreStyle.css" />
+    </stylesheets>
+</BorderPane>

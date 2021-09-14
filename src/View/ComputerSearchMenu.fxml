@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" fx:id="subscene2" alignment="CENTER" columnHalignment="CENTER" maxHeight="-Infinity"
+          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+          prefWidth="900.0" style="-fx-background-color: lightblue;"
+          xmlns="http://javafx.com/javafx/8.0.171" fx:controller="JavaFX.ComputerSearchMenuController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="900.0">
+            <top>
+                <ImageView fitHeight="221.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true"
+                           BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../Resources/laptopIcon.png"/>
+                    </image>
+                </ImageView>
+            </top>
+            <bottom>
+                <GridPane prefHeight="162.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="searchComputerButton" alignment="CENTER" contentDisplay="CENTER"
+                                mnemonicParsing="false" onAction="#handleSearchComputerButtonAction"
+                                styleClass="UniversalButton" stylesheets="@../Resources/CoreStyle.css" text="Search"
+                                textAlignment="CENTER" GridPane.halignment="CENTER"/>
+                    </children>
+                </GridPane>
+            </bottom>
+            <center>
+                <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="273.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="427.0" minWidth="10.0" prefWidth="427.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Title" GridPane.halignment="RIGHT">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets right="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Year" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets right="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Model" GridPane.halignment="RIGHT"
+                               GridPane.rowIndex="2">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets right="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label contentDisplay="CENTER" text="Manufacturer" GridPane.halignment="RIGHT"
+                               GridPane.rowIndex="3">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets right="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Installed Operating System" textOverrun="CLIP" wrapText="true"
+                               GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets right="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="computerTitle" promptText="Title" GridPane.columnIndex="1"/>
+                        <TextField fx:id="computerYear" promptText="Year" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1"/>
+                        <TextField fx:id="computerModel" promptText="Model" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="2"/>
+                        <TextField fx:id="computerManufacturer" promptText="Manufacturer" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="3"/>
+                        <TextField fx:id="computerOS" promptText="Installed Operating System" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="4"/>
+                    </children>
+                </GridPane>
+            </center>
+            <right>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER"/>
+            </right>
+            <left>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER"/>
+            </left>
+        </BorderPane>
+    </children>
+</FlowPane>

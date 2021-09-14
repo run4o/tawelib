@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="900" styleClass="SubScene"
+            stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="JavaFX.ResourceFlowController">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="367.0" minWidth="10.0" prefWidth="338.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="504.0" minWidth="10.0" prefWidth="395.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="318.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="198.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="366.0" minHeight="8.0" prefHeight="19.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="366.0" minHeight="10.0" prefHeight="193.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets bottom="100.0" left="100.0" right="100.0" top="100.0"/>
+            </BorderPane.margin>
+            <children>
+                <Text fx:id="textName" strokeType="OUTSIDE" strokeWidth="0.0" text="Name Name" translateX="30.0"
+                      translateY="-10.0" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="40.0"/>
+                    </font>
+                </Text>
+                <TextField fx:id="textIDField" prefHeight="31.0" prefWidth="380.0" promptText="e.g. 21345"
+                           styleClass="UniversalButton" translateY="-25.0" GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </TextField>
+                <Button fx:id="returnButton" mnemonicParsing="false" onAction="#handleReturnCopyAction"
+                        prefHeight="31.0" prefWidth="90.0" styleClass="UniversalButton" text="Return" translateX="-10.0"
+                        translateY="-60.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="unreserveButton" mnemonicParsing="false" onAction="#handleUnReserveAction"
+                        prefHeight="31.0" prefWidth="90.0" styleClass="UniversalButton" text="Unreserve"
+                        translateX="180.0" translateY="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                        GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSelectIDAction"
+                        prefHeight="31.0" prefWidth="90.0" styleClass="UniversalButton" text="Select"
+                        textAlignment="CENTER" translateY="55.0" GridPane.columnIndex="2" GridPane.rowIndex="2"
+                        GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" minWidth="280.0" mnemonicParsing="false"
+                        onAction="#handleViewLoanHistoryAction" styleClass="UniversalButton" text="Loan History"
+                        textAlignment="CENTER" translateY="-100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                        GridPane.rowIndex="2" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="419.0" layoutY="331.0" minWidth="280.0"
+                        mnemonicParsing="false" onAction="#handleTransactionAction" styleClass="UniversalButton"
+                        text="Transaction Manager" textAlignment="CENTER" translateY="-60.0" GridPane.columnIndex="1"
+                        GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" minWidth="280.0" mnemonicParsing="false"
+                        onAction="#handleDueItemsAction" styleClass="UniversalButton" text="Due Items"
+                        textAlignment="CENTER" translateY="-20.0" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                        GridPane.rowIndex="2" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Button>
+                <Button fx:id="borrowButton" mnemonicParsing="false" onAction="#handleBorrowCopyAction"
+                        prefHeight="31.0" prefWidth="90.0" styleClass="UniversalButton" text="Borrow" translateX="85.0"
+                        translateY="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" styleClass="ScrollTitle"
+                      text="Copy Identifier" translateY="-140.0" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                      GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Text>
+                <Button fx:id="editAccount" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity"
+                        mnemonicParsing="false" onAction="#handleEditAccountAction" prefHeight="231.0" prefWidth="170.0"
+                        styleClass="UniversalButton" text="Edit Account" translateY="23.0" GridPane.halignment="RIGHT"
+                        GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <graphic>
+                        <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../DefaultAvatars/Avatar1.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="20.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button alignment="CENTER" layoutX="230.0" layoutY="221.0" minWidth="89.0" mnemonicParsing="false"
+                        onAction="#handleReservedResourcesAction" prefHeight="110.0" prefWidth="90.0"
+                        styleClass="UniversalButton" text="Reserved Resources" textAlignment="CENTER" translateX="10.0"
+                        translateY="68.0" wrapText="true" GridPane.columnIndex="2">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Button>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>

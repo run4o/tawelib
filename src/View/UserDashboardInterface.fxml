@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="UserDashboard" stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.UserDashboardInterfaceController">
+    <bottom>
+        <HBox prefHeight="82.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <top>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+                    <image>
+                        <Image url="@../Resources/tawelibIcon.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="currentBalance" alignment="CENTER" contentDisplay="CENTER" layoutX="1130.0" layoutY="14.0" prefHeight="26.0" prefWidth="64.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-color: #2db92d; -fx-background-radius: 10;" text="£0.00" textAlignment="CENTER" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="14.0" />
+                <Button fx:id="homeButton" layoutX="1205.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHomeButtonAction" styleClass="UniversalButton" text="Home" textAlignment="CENTER" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0" />
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="5.0">
+                    <children>
+                        <Button fx:id="changeAvatar" mnemonicParsing="false" onAction="#handleAvatarChangeButtonAction" styleClass="UniversalButton" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/ProfileImageSelector.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="itemDue" mnemonicParsing="false" onAction="#handleItemsDueAction" prefWidth="162.0" styleClass="UniversalButton" text="Items Due" />
+                        <Button fx:id="loanedItem" mnemonicParsing="false" onAction="#handleLoanAction" prefWidth="162.0" styleClass="UniversalButton" text="Loan History" />
+                        <Button fx:id="requestedResources" mnemonicParsing="false" onAction="#handleRequestedResourceAction" prefWidth="162.0" styleClass="UniversalButton" text="Requested Resources" />
+                        <Button fx:id="reservedItem" mnemonicParsing="false" onAction="#handleReservedAction" prefWidth="162.0" styleClass="UniversalButton" text="Reserved Items" />
+                        <Button fx:id="transactionHistory" mnemonicParsing="false" onAction="#handleTransactionHistoryAction" prefWidth="162.0" styleClass="UniversalButton" text="Transaction History" />
+                        <Button fx:id="newAdditions" layoutX="28.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleNewAdditionsAction" prefWidth="162.0" styleClass="UniversalButton" text="New Additions" />
+                        <Button mnemonicParsing="false" onAction="#editAccount" prefWidth="162.0" styleClass="UniversalButton" text="Edit Account " />
+                    </children>
+                </VBox>
+            </children>
+        </FlowPane>
+    </center>
+</BorderPane>

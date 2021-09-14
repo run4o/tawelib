@@ -1,0 +1,48 @@
+.SubScene {
+    -fx-background-color: lightblue;
+}
+
+.LogIn {
+    -fx-background-color: lightblue;
+}
+
+.UserDashboard {
+    -fx-background-color: lightblue;
+}
+
+.HomeInterfaceFlow {
+    -fx-background-color: lightblue;
+}
+
+.UniversalButton {
+    -fx-background-color: rgba(215, 243, 245, 0.5);
+}
+
+.UniversalButton:hover {
+    -fx-background-color: rgba(215, 243, 245, 1);
+}
+
+.UniversalTextBox {
+    -fx-background-color: White;
+}
+
+.ScrollPane {
+    -fx-background-color: rgb(226, 245, 243);
+    -fx-border-color: white;
+}
+
+.ScrollContainer {
+    -fx-background-color: rgba(215, 243, 245, 1);
+}
+
+.ScrollTitle {
+    -fx-font-size: 30px;
+}
+
+/* Remove spacing */
+
+/* You can control the actual button sizes here */
+
+/* Colors on hover */
+
+/* Selected toggle color */

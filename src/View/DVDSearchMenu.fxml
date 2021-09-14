@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="900.0" styleClass="SubScene"
+            stylesheets="@../Resources/CoreStyle.css" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="JavaFX.DVDSearchMenuController">
+    <top>
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                   BorderPane.alignment="CENTER">
+            <image>
+                <Image url="@../Resources/dvdIcon.png"/>
+            </image>
+        </ImageView>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" vgap="10.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="255.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="454.0" minWidth="10.0" prefWidth="425.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="80.0" valignment="CENTER" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="80.0" valignment="CENTER" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="80.0" valignment="CENTER" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Title" GridPane.halignment="RIGHT"
+                       GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="20.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label contentDisplay="CENTER" text="Year" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="20.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Director" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="20.0"/>
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="dvdTitle" promptText="Title" styleClass="UniversalTextBox" GridPane.columnIndex="1"/>
+                <TextField fx:id="dvdYear" promptText="Year" styleClass="UniversalTextBox" GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"/>
+                <TextField fx:id="dvdDirector" promptText="Director" styleClass="UniversalTextBox"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER"/>
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER"/>
+    </right>
+    <bottom>
+        <GridPane prefHeight="145.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button fx:id="searchDVDButton" mnemonicParsing="false" onAction="#handleDVDSearchButton"
+                        styleClass="UniversalButton" text="Search" GridPane.halignment="CENTER"
+                        GridPane.valignment="TOP"/>
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>
